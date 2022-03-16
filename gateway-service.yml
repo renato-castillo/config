@@ -1,0 +1,34 @@
+server:
+  port: ${PORT:0}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    id: ${spring.application.name}:${spring.application.instance_id}:${random.value}
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: ms-account-transactions
+          uri: lb://ms-account-transactions
+          predicates:
+            - Path=/api/movements
+        - id: ms-business-accounts
+          uri: lb://ms-business-accounts
+            - Path=/api/currentaccount
+        - id: ms-clients
+          uri: lb://ms-clients
+            - Path=/api/client/company, /api/client/person
+        - id: ms-credit-transactions
+          uri: lb://ms-credit-transactions
+            - Path=/api/movementrecord
+        - id: ms-creditcards
+          uri: lb://ms-creditcards
+            - Path=/api/creditcard
+        - id: ms-personal-accounts
+          uri: lb://ms-personal-accounts
+            - Path=/api/personalaccounts
