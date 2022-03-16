@@ -16,7 +16,9 @@ spring:
         - id: ms-account-transactions
           uri: lb://ms-account-transactions
           predicates:
-            - Path=/api/movements
+            - Path=/api/movements/**
+          filters:
+            - StripPrefix=2
         - id: ms-business-accounts
           uri: lb://ms-business-accounts
             - Path=/api/currentaccount
