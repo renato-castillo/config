@@ -19,5 +19,53 @@ spring:
             - Path=/account/transactions/**
           filters:
             - StripPrefix=2
+        - id: ms-business-accounts
+          uri: lb://ms-business-accounts
+          predicates:
+            - Path=/bussiness/accounts/**
+          filters:
+            - StripPrefix=2
+        - id: ms-clients
+          uri: lb://ms-clients
+          predicates:
+            - Path=/clients/**
+          filters:
+            - StripPrefix=1
+        - id: ms-credit-transactions
+          uri: lb://ms-credit-transactions
+          predicates:
+            - Path=/credit/transactions/**
+          filters:
+            - StripPrefix=2
+        - id: ms-creditcard-transactions
+          uri: lb://ms-creditcard-transactions
+          predicates:
+            - Path=/creditcard/transactions/**
+          filters:
+            - StripPrefix=2
+        - id: ms-creditcards
+          uri: lb://ms-creditcards
+          predicates:
+            - Path=/creditcards/**
+          filters:
+            - StripPrefix=1
+        - id: ms-credits
+          uri: lb://ms-credits
+          predicates:
+            - Path=/credits/**
+          filters:
+            - StripPrefix=1
+        - id: ms-personal-accounts
+          uri: lb://ms-personal-accounts
+          predicates:
+            - Path=/personal/accounts/**
+          filters:
+            - StripPrefix=2
+        - id: ms-register-product-client
+          uri: lb://ms-register-product-client
+          predicates:
+            - Path=/register/product/client/**
+          filters:
+            - StripPrefix=3
 
 
