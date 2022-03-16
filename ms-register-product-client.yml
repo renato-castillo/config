@@ -14,3 +14,8 @@ spring:
     data:
         mongodb:
             uri: mongodb+srv://admin:123456.@msregisterproductclient.vjvh4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true

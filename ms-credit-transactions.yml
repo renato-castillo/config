@@ -14,3 +14,8 @@ spring:
     data:
         mongodb:
             uri: mongodb+srv://project:0daVc99FvCic3c4k@cluster0.hocxk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
