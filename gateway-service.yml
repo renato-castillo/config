@@ -19,18 +19,5 @@ spring:
             - Path=/api/movements/**
           filters:
             - StripPrefix=2
-        - id: ms-business-accounts
-          uri: lb://ms-business-accounts
-            - Path=/api/currentaccount
-        - id: ms-clients
-          uri: lb://ms-clients
-            - Path=/api/client/company, /api/client/person
-        - id: ms-credit-transactions
-          uri: lb://ms-credit-transactions
-            - Path=/api/movementrecord
-        - id: ms-creditcards
-          uri: lb://ms-creditcards
-            - Path=/api/creditcard
-        - id: ms-personal-accounts
-          uri: lb://ms-personal-accounts
-            - Path=/api/personalaccounts
+
+
