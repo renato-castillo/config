@@ -27,9 +27,3 @@ eureka:
 
 server:
   port: ${PORT:0}
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: *
