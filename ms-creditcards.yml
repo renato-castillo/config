@@ -1,0 +1,16 @@
+logging:
+    level:
+        org:
+            springframework:
+                data:
+                    mongodb:
+                        core:
+                            ReactiveMongoTemplate: DEBUG
+        root: info
+    pattern:
+        console: '%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level)
+            %logger.%M - %msg%n'
+spring:
+    data:
+        mongodb:
+            uri: mongodb+srv://admin:123456.@cluster0.e4zdc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
