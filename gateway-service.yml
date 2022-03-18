@@ -67,5 +67,11 @@ spring:
             - Path=/register/product/client/**
           filters:
             - StripPrefix=3
+        - id: ms-commission-transactions
+          uri: lb://ms-commission-transactions
+          predicates:
+            - Path=/commission/transaction/**
+          filters:
+            - StripPrefix=3
 
 
