@@ -62,3 +62,14 @@ resilience4j.circuitbreaker:
             waitDurationInOpenState: 50s
             failureRateThreshold: 50
             eventConsumerBufferSize: 10
+resilience4j.retry:
+    instances:
+        creditCardServiceRetry:
+            maxAttempts: 3
+            waitDuration: 2s
+        businessAccountServiceRetry:
+            maxAttempts: 3
+            waitDuration: 2s
+        personalAccountServiceRetry:
+            maxAttempts: 3
+            waitDuration: 2s

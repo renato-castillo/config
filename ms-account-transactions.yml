@@ -63,3 +63,14 @@ resilience4j.circuitbreaker:
             waitDurationInOpenState: 50s
             failureRateThreshold: 50
             eventConsumerBufferSize: 10
+resilience4j.retry:
+    instances:
+        commissionRetry:
+            maxAttempts: 3
+            waitDuration: 2s
+        registerProductRetry:
+            maxAttempts: 3
+            waitDuration: 2s
+        allRetry:
+            maxAttempts: 3
+            waitDuration: 2s
